@@ -122,16 +122,25 @@ export default class App extends Component {
           ref="form"
           style={styles.form}>
           <View style={styles.btns}>
-            <Btn label="😻 Reset" onPress={() => this.setState({ previewSource: catsSource })} />
+            {/*<Btn label="😻 Reset" onPress={() => this.setState({ previewSource: catsSource })} />
             <Btn label="📷 Head Section" onPress={this.snapshot("header")} />
             <Btn label="📷 Form" onPress={this.snapshot("form")} />
             <Btn label="📷 Experimental Section" onPress={this.snapshot("complex")} />
             <Btn label="📷 All (ScrollView)" onPress={this.snapshot("full")} />
-            <Btn label="📷 GL React" onPress={this.snapshot("gl")} />
-            <Btn label="📷 MapView" onPress={this.snapshot("mapview")} />
-            <Btn label="📷 WebView" onPress={this.snapshot("webview")} />
-            <Btn label="📷 Video" onPress={this.snapshot("video")} />
-            <Btn label="📷 Empty View (should crash)" onPress={this.snapshot("empty")} />
+            <Btn label="📷 GL React" onPress={this.snapshot("gl")} />*/}
+            <Btn label="📷 WebView1" onPress={this.snapshot("webview1")} />
+            <Btn label="📷 WebView2" onPress={this.snapshot("webview2")} />
+            {/*<Btn label="📷 Video" onPress={this.snapshot("video")} />
+            <Btn label="📷 Empty View (should crash)" onPress={this.snapshot("empty")} />*/}
+          </View>
+
+          <View
+            ref="webview1"
+            collapsable={false}
+            style={{ width: 300, height: 300 }}>
+            <WebView
+              source={require('./assets/cavans.html')}
+            />
           </View>
           <View style={styles.field}>
             <Text style={styles.label}>Format</Text>
@@ -225,18 +234,16 @@ export default class App extends Component {
             style={{ width: 300, height: 300 }}
           />
           <View
-            ref="webview"
+            ref="webview2"
             collapsable={false}
             style={{ width: 300, height: 300 }}>
             <WebView
-              source={{
-                uri: "https://github.com/gre/react-native-view-shot"
-              }}
+              source={require('./assets/cavans.html')}
             />
           </View>
           <Video
             ref="video"
-            style={{ width: 300, height: 300 }}
+            style={{ width: 300, height: 500 }}
             source={require("./broadchurch.mp4")}
             volume={0}
             repeat
