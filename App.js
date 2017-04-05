@@ -137,7 +137,7 @@ export default class App extends Component {
           <View
             ref="webview1"
             collapsable={false}
-            style={{ width: 300, height: 300 }}>
+            style={{ width: 300, height: 500 }}>
             <WebView
               source={require('./assets/cavans.html')}
             />
@@ -236,7 +236,7 @@ export default class App extends Component {
           <View
             ref="webview2"
             collapsable={false}
-            style={{ width: 300, height: 300 }}>
+            style={{ width: 300, height: 500 }}>
             <WebView
               source={require('./assets/cavans.html')}
             />
